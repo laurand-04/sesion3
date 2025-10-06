@@ -26,7 +26,7 @@ public class Cuenta {
 	}
 
 	public Double getSaldo() {
-		return 200.0;
+		return saldo;
 	}
 
 	public void setSaldo(Double saldo) {
@@ -35,13 +35,13 @@ public class Cuenta {
 
 	public void ingresar(double d) {
 		// TODO Auto-generated method stub
-		this.saldo=200.0;
+		this.saldo=saldo+d;
 		
 	}
 
 	public void retirar(double i) {
 		// TODO Auto-generated method stub
-		this.saldo=-200.0;
+		this.saldo=saldo-i;
 		
 	}
 	
