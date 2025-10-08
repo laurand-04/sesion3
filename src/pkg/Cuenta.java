@@ -47,6 +47,8 @@ public class Cuenta {
 	public void retirar(double i) {
 		// TODO Auto-generated method stub
 		this.saldo=saldo-i;
+		if(this.saldo < -500)
+			this.saldo = -500.0;
 		
 	}
 	
