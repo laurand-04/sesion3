@@ -57,7 +57,7 @@ class testCuenta {
 		cuenta1.ingresar(100.0);
 		assertEquals(-50, cuenta1.getSaldo());
 		cuenta2.retirar(200.0);
-		assertEquals(-500, cuenta2.getSaldo());
+		assertEquals(-350, cuenta2.getSaldo());
 		cuenta2.retirar(150.0);
 		assertEquals(-500, cuenta2.getSaldo()); 
 		cuenta1.retirar(200.0);
@@ -65,7 +65,7 @@ class testCuenta {
 		cuenta2.ingresar(50.0);
 		assertEquals(-450, cuenta2.getSaldo()); 
 		cuenta2.retirar(100.0);
-		assertEquals(-500, cuenta2.getSaldo()); 
+		assertEquals(-450, cuenta2.getSaldo()); 
 	}
 
 }

@@ -8,6 +8,7 @@ public class Cuenta {
 	String titular;
 	Double saldo;
 	List<Movimiento> movimientos;
+	public enum Signo {D, H};
 	
 	public Cuenta(Double i) {
 		this.saldo = i;
@@ -41,15 +42,19 @@ public class Cuenta {
 	public void ingresar(double d) {
 		// TODO Auto-generated method stub
 		this.saldo=saldo+d;
+		movimientos.add(new Movimiento(d, false, "Reintegro"));
 		
 	}
 
 	public void retirar(double i) {
 		// TODO Auto-generated method stub
-		this.saldo=saldo-i;
-		if(this.saldo < -500)
-			this.saldo = -500.0;
-		
+		if(this.saldo-i >= -500) {
+			this.saldo=saldo-i;
+			movimientos.add(new Movimiento(i, true, "Reintegro"));
+		}
+		else {
+			System.out.println("Error al hacer el reintegro de " + i + ", su saldo es de " + saldo);
+		}
 	}
 	
 	

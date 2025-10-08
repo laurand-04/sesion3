@@ -1,5 +1,7 @@
 package pkg;
 
+import pkg.Cuenta.Signo;
+
 public class Movimiento {
 	public enum Signo {D, H};
 	
@@ -7,6 +9,15 @@ public class Movimiento {
 	private Signo signo;
 	private String detalle;
 	
+	public Movimiento(double importe, boolean b, String detalle) {
+		super();
+		this.importe = importe;
+		if (b)
+			this.signo = Signo.D;
+		else
+			this.signo = Signo.H;
+		this.detalle = detalle;
+	}
 	public double getImporte() {
 		return importe;
 	}
